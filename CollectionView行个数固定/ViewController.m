@@ -9,11 +9,11 @@
 #import "ViewController.h"
 
 
-
-#import "ZPHGrideViewCell.h"
+#import "GrideCell.h"
+#import "GrideViewCell.h"
 #import "ZHPCellModel.h"
 
-@interface ViewController () <UITableViewDelegate, UITableViewDataSource,ZPHGrideItemViewDelegate>
+@interface ViewController () <UITableViewDelegate, UITableViewDataSource,GrideItemViewDelegate>
 
 {
     CGFloat cellHeight;
@@ -73,7 +73,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    ZPHGrideViewCell *cell = [ZPHGrideViewCell initZPHGrideViewCellWithRow:rowItem];
+    GrideViewCell *cell = [GrideViewCell initGrideViewCellWithRow:rowItem];
     cellHeight = cell.frame.size.height;
     
     cell = [cell setItemViewDataWithArray:_labelArray IndexPath:indexPath Delegate:self Rownums:rowItem];
@@ -82,7 +82,7 @@
 }
 
 //GrideItemViewDelegate
-- (void)OnGrideItemViewClicked:(ZPHGrideItemView *)itemView{
+- (void)OnGrideItemViewClicked:(GrideItemView *)itemView{
     NSLog(@"点击了这里%d",itemView.tag);
 }
 @end

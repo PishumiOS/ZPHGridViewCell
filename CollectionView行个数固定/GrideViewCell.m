@@ -1,12 +1,12 @@
 //
-//  ZPHGrideViewCell.m
+//  GrideViewCell.m
 //  CollectionView行个数固定
 //
 //  Created by Pishum on 16/8/10.
 //  Copyright © 2016年 Leleda. All rights reserved.
 //
 
-#import "ZPHGrideViewCell.h"
+#import "GrideViewCell.h"
 #import "ZHPCellModel.h"
 
 
@@ -14,7 +14,7 @@
 static CGFloat kHorSapaceing = 20.0;
 static CGFloat kLabelHeight = 30.0;
 
-@implementation ZPHGrideViewCell
+@implementation GrideViewCell
 
 
 
@@ -30,8 +30,8 @@ static CGFloat kLabelHeight = 30.0;
     // Configure the view for the selected state
 }
 
-+ (ZPHGrideViewCell *)initZPHGrideViewCellWithRow:(NSInteger)row{
-    ZPHGrideViewCell *cell = [[ZPHGrideViewCell alloc]init];
++ (GrideViewCell *)initGrideViewCellWithRow:(NSInteger)row{
+    GrideViewCell *cell = [[GrideViewCell alloc]init];
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
@@ -43,7 +43,7 @@ static CGFloat kLabelHeight = 30.0;
     CGRect cellBound = CGRectMake(0, 0, mainRect.size.width, itemWidth);
     
     cell.frame = cellBound;
-    cell.cellViewItems = [[NSMutableArray<ZPHGrideItemView*> alloc]init];
+    cell.cellViewItems = [[NSMutableArray<GrideItemView*> alloc]init];
     
     CGFloat cellImageHeight = itemWidth - kLabelHeight - kHorSapaceing -5;
     
@@ -63,7 +63,7 @@ static CGFloat kLabelHeight = 30.0;
         
         
         
-        ZPHGrideItemView *itemBgView = [ZPHGrideItemView initZPHGrideItemViewWithImgView:imageView Label:label];
+        GrideItemView *itemBgView = [GrideItemView initGrideItemViewWithImgView:imageView Label:label];
         
         CGRect itemBgFrame = CGRectMake(kHorSapaceing * (index+1) + index * itemWidth, 0, itemWidth, itemWidth);
         itemBgView.frame = itemBgFrame;
@@ -81,10 +81,10 @@ static CGFloat kLabelHeight = 30.0;
 
 
 
-- (ZPHGrideViewCell*) setItemViewDataWithArray:(NSMutableArray<ZHPCellModel*> *)array IndexPath:(NSIndexPath*)indexPath Delegate:(id<ZPHGrideItemViewDelegate>)delegate Rownums:(NSInteger)rownums{
+- (GrideViewCell*) setItemViewDataWithArray:(NSMutableArray<ZHPCellModel*> *)array IndexPath:(NSIndexPath*)indexPath Delegate:(id<GrideItemViewDelegate>)delegate Rownums:(NSInteger)rownums{
     
     for (int index = 0; index < rownums; index++) {
-        ZPHGrideItemView *itemView = self.cellViewItems[index];
+        GrideItemView *itemView = self.cellViewItems[index];
         
         int cursor = (int)(indexPath.row * rownums + index);
         if (cursor < [array count]){

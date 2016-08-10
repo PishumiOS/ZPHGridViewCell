@@ -1,5 +1,5 @@
 //
-//  CustomCell.h
+//  GrideCell.h
 //  CollectionView行个数固定
 //
 //  Created by Pishum on 16/8/10.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CustomCell : UITableViewCell
+@interface GrideCell : UITableViewCell
 
 @end

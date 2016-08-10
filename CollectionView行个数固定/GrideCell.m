@@ -1,14 +1,14 @@
 //
-//  CustomCell.m
+//  GrideCell.m
 //  CollectionView行个数固定
 //
 //  Created by Pishum on 16/8/10.
 //  Copyright © 2016年 Leleda. All rights reserved.
 //
 
-#import "CustomCell.h"
+#import "GrideCell.h"
 
-@implementation CustomCell
+@implementation GrideCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

@@ -1,14 +1,14 @@
 //
-//  GrideItemView.m
+//  ZPHGrideItemView.m
 //  CollectionView行个数固定
 //
 //  Created by Pishum on 16/8/10.
 //  Copyright © 2016年 Leleda. All rights reserved.
 //
 
-#import "GrideItemView.h"
+#import "ZPHGrideItemView.h"
 
-@implementation GrideItemView
+@implementation ZPHGrideItemView
 
 
 
@@ -21,8 +21,8 @@
 */
 
 
-+ (GrideItemView *)initGrideItemViewWithImgView:(UIImageView*)img Label:(UILabel*)label{
-    GrideItemView *itemView = [[GrideItemView alloc]init];
++ (ZPHGrideItemView *)initZPHGrideItemViewWithImgView:(UIImageView*)img Label:(UILabel*)label{
+    ZPHGrideItemView *itemView = [[ZPHGrideItemView alloc]init];
     
     itemView.imageView = img;
     itemView.label = label;
@@ -50,8 +50,8 @@
 
 
 - (void)OnClickedItem{
-    if ([self.delegate respondsToSelector:@selector(OnGrideItemViewClicked:)]) {
-        [self.delegate OnGrideItemViewClicked:self];
+    if ([self.delegate respondsToSelector:@selector(OnZPHGrideItemViewClicked:)]) {
+        [self.delegate OnZPHGrideItemViewClicked:self];
     }
 }
 

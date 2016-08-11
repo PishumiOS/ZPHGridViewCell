@@ -17,9 +17,9 @@
 		9C36507F1D5B61F700CC713B /* tab_home_view_unselect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C36507E1D5B61F700CC713B /* tab_home_view_unselect@2x.png */; };
 		9C3650881D5B681300CC713B /* GrideCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3650861D5B681300CC713B /* GrideCell.m */; };
 		9C3650891D5B681300CC713B /* GrideCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C3650871D5B681300CC713B /* GrideCell.xib */; };
-		9C36508C1D5B691600CC713B /* GrideViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C36508B1D5B691600CC713B /* GrideViewCell.m */; };
-		9C36508F1D5B6E4F00CC713B /* GrideItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C36508E1D5B6E4F00CC713B /* GrideItemView.m */; };
-		9C5753A71D5B903000279D69 /* ZHPCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5753A61D5B903000279D69 /* ZHPCellModel.m */; };
+		9C7C3B251D5C0BA50063FE88 /* ZHPCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C3B201D5C0BA50063FE88 /* ZHPCellModel.m */; };
+		9C7C3B261D5C0BA50063FE88 /* ZPHGrideItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C3B221D5C0BA50063FE88 /* ZPHGrideItemView.m */; };
+		9C7C3B271D5C0BA50063FE88 /* ZPHGrideViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C3B241D5C0BA50063FE88 /* ZPHGrideViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,12 +38,12 @@
 		9C3650851D5B681300CC713B /* GrideCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrideCell.h; sourceTree = "<group>"; };
 		9C3650861D5B681300CC713B /* GrideCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrideCell.m; sourceTree = "<group>"; };
 		9C3650871D5B681300CC713B /* GrideCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GrideCell.xib; sourceTree = "<group>"; };
-		9C36508A1D5B691600CC713B /* GrideViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrideViewCell.h; sourceTree = "<group>"; };
-		9C36508B1D5B691600CC713B /* GrideViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrideViewCell.m; sourceTree = "<group>"; };
-		9C36508D1D5B6E4F00CC713B /* GrideItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrideItemView.h; sourceTree = "<group>"; };
-		9C36508E1D5B6E4F00CC713B /* GrideItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrideItemView.m; sourceTree = "<group>"; };
-		9C5753A51D5B903000279D69 /* ZHPCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHPCellModel.h; sourceTree = "<group>"; };
-		9C5753A61D5B903000279D69 /* ZHPCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHPCellModel.m; sourceTree = "<group>"; };
+		9C7C3B1F1D5C0BA50063FE88 /* ZHPCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHPCellModel.h; sourceTree = "<group>"; };
+		9C7C3B201D5C0BA50063FE88 /* ZHPCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHPCellModel.m; sourceTree = "<group>"; };
+		9C7C3B211D5C0BA50063FE88 /* ZPHGrideItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPHGrideItemView.h; sourceTree = "<group>"; };
+		9C7C3B221D5C0BA50063FE88 /* ZPHGrideItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPHGrideItemView.m; sourceTree = "<group>"; };
+		9C7C3B231D5C0BA50063FE88 /* ZPHGrideViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPHGrideViewCell.h; sourceTree = "<group>"; };
+		9C7C3B241D5C0BA50063FE88 /* ZPHGrideViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPHGrideViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +76,7 @@
 		9C3650611D5B420000CC713B /* CollectionView行个数固定 */ = {
 			isa = PBXGroup;
 			children = (
+				9C7C3B1E1D5C0BA50063FE88 /* ZPHGridViewCell */,
 				9C36507E1D5B61F700CC713B /* tab_home_view_unselect@2x.png */,
 				9C3650651D5B420000CC713B /* AppDelegate.h */,
 				9C3650661D5B420000CC713B /* AppDelegate.m */,
@@ -98,14 +99,21 @@
 				9C3650851D5B681300CC713B /* GrideCell.h */,
 				9C3650861D5B681300CC713B /* GrideCell.m */,
 				9C3650871D5B681300CC713B /* GrideCell.xib */,
-				9C36508A1D5B691600CC713B /* GrideViewCell.h */,
-				9C36508B1D5B691600CC713B /* GrideViewCell.m */,
-				9C36508D1D5B6E4F00CC713B /* GrideItemView.h */,
-				9C36508E1D5B6E4F00CC713B /* GrideItemView.m */,
-				9C5753A51D5B903000279D69 /* ZHPCellModel.h */,
-				9C5753A61D5B903000279D69 /* ZHPCellModel.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C7C3B1E1D5C0BA50063FE88 /* ZPHGridViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9C7C3B1F1D5C0BA50063FE88 /* ZHPCellModel.h */,
+				9C7C3B201D5C0BA50063FE88 /* ZHPCellModel.m */,
+				9C7C3B211D5C0BA50063FE88 /* ZPHGrideItemView.h */,
+				9C7C3B221D5C0BA50063FE88 /* ZPHGrideItemView.m */,
+				9C7C3B231D5C0BA50063FE88 /* ZPHGrideViewCell.h */,
+				9C7C3B241D5C0BA50063FE88 /* ZPHGrideViewCell.m */,
+			);
+			path = ZPHGridViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,12 +189,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C36508C1D5B691600CC713B /* GrideViewCell.m in Sources */,
-				9C5753A71D5B903000279D69 /* ZHPCellModel.m in Sources */,
-				9C36508F1D5B6E4F00CC713B /* GrideItemView.m in Sources */,
+				9C7C3B271D5C0BA50063FE88 /* ZPHGrideViewCell.m in Sources */,
+				9C7C3B261D5C0BA50063FE88 /* ZPHGrideItemView.m in Sources */,
 				9C36506A1D5B420000CC713B /* ViewController.m in Sources */,
 				9C3650671D5B420000CC713B /* AppDelegate.m in Sources */,
 				9C3650881D5B681300CC713B /* GrideCell.m in Sources */,
+				9C7C3B251D5C0BA50063FE88 /* ZHPCellModel.m in Sources */,
 				9C3650641D5B420000CC713B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

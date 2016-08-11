@@ -10,10 +10,10 @@
 
 
 #import "GrideCell.h"
-#import "GrideViewCell.h"
+#import "ZPHGrideViewCell.h"
 #import "ZHPCellModel.h"
 
-@interface ViewController () <UITableViewDelegate, UITableViewDataSource,GrideItemViewDelegate>
+@interface ViewController () <UITableViewDelegate, UITableViewDataSource,ZPHGrideItemViewDelegate>
 
 {
     CGFloat cellHeight;
@@ -40,7 +40,7 @@
     ZHPCellModel *cellModel7 = [ZHPCellModel initZHPCellModelWithImgName:@"tab_home_view_select@2x" Label:@"孔明"];
     _labelArray = [@[cellModel1,cellModel2,cellModel3,cellModel4,cellModel5,cellModel6,cellModel7] copy];
     
-    rowItem = 6;
+    rowItem = 4;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -73,7 +73,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    GrideViewCell *cell = [GrideViewCell initGrideViewCellWithRow:rowItem];
+    ZPHGrideViewCell *cell = [ZPHGrideViewCell initZPHGrideViewCellWithRow:rowItem];
     cellHeight = cell.frame.size.height;
     
     cell = [cell setItemViewDataWithArray:_labelArray IndexPath:indexPath Delegate:self Rownums:rowItem];
@@ -82,7 +82,7 @@
 }
 
 //GrideItemViewDelegate
-- (void)OnGrideItemViewClicked:(GrideItemView *)itemView{
+- (void)OnZPHGrideItemViewClicked:(ZPHGrideItemView *)itemView{
     NSLog(@"点击了这里%d",itemView.tag);
 }
 @end

@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) NSMutableArray<ZPHGrideItemView*> *cellViewItems;
 
-+ (ZPHGrideViewCell *)initZPHGrideViewCellWithRow:(NSInteger)row;
++ (ZPHGrideViewCell *)initZPHGrideViewCellWithRow:(NSInteger)row TableViewFrame:(CGRect)tableViewFrame;
 
 - (ZPHGrideViewCell*) setItemViewDataWithArray:(NSMutableArray *)array IndexPath:(NSIndexPath*)indexPath Delegate:(id<ZPHGrideItemViewDelegate>)delegate Rownums:(NSInteger)rownums;
 @end

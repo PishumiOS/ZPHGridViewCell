@@ -30,41 +30,42 @@
     // Configure the view for the selected state
 }
 
-+ (ZPHGrideViewCell *)initZPHGrideViewCellWithRow:(NSInteger)row{
++ (ZPHGrideViewCell *)initZPHGrideViewCellWithRow:(NSInteger)row TableViewFrame:(CGRect)tableViewFrame{
     ZPHGrideViewCell *cell = [[ZPHGrideViewCell alloc]init];
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.backgroundColor = [UIColor colorWithRed:0.94 green:0.94 blue:0.96 alpha:1.00];
     
-    CGRect mainRect = [[UIScreen mainScreen] bounds];
+//    CGRect mainRect = [[UIScreen mainScreen] bounds];
     
-    CGFloat kHorSapaceing = mainRect.size.width /row / 10.0;
-    CGFloat kLabelHeight = mainRect.size.width /row / 3.0;
+    CGFloat kHorSapaceing = 1.0;
+    CGFloat kLabelHeight = tableViewFrame.size.width /row / 3.0;
+    CGFloat kVerSpaceing = tableViewFrame.size.width / row / 10.0;
     
     //每个item的宽度,宽高相同
-    CGFloat itemWidth = (mainRect.size.width - (row + 1) * kHorSapaceing)/row;
+    CGFloat itemWidth = (tableViewFrame.size.width - (row + 1) * kHorSapaceing)/row;
     
-    CGRect cellBound = CGRectMake(0, 0, mainRect.size.width, itemWidth);
+    CGRect cellBound = CGRectMake(0, 0, tableViewFrame.size.width, itemWidth);
     
     cell.frame = cellBound;
     cell.cellViewItems = [[NSMutableArray<ZPHGrideItemView*> alloc]init];
     
-    CGFloat cellImageHeight = itemWidth - kLabelHeight - kHorSapaceing -5;
+    CGFloat cellImageHeight = itemWidth - kLabelHeight - kVerSpaceing -5;
     
     NSLog(@"itemWidth=%f cellImageHeight=%f",itemWidth,cellImageHeight);
     for (int index = 0; index < row; index++) {
         
-        UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake((itemWidth - cellImageHeight)/2.0, kHorSapaceing, cellImageHeight, cellImageHeight)];
+        UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake((itemWidth - cellImageHeight)/2.0, kVerSpaceing, cellImageHeight, cellImageHeight)];
+        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, kVerSpaceing + cellImageHeight, itemWidth, kLabelHeight)];
         
-        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, kHorSapaceing + cellImageHeight, itemWidth, kLabelHeight)];
-        
-//        UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(kHorSapaceing, kHorSapaceing, cellImageHeight, cellImageHeight)];
-//        
-//        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, kHorSapaceing + cellImageHeight, itemWidth, kLabelHeight)];
         
         label.textAlignment = NSTextAlignmentCenter;
         label.textColor = [UIColor grayColor];
+        CGFloat labelTextSize = 16 - row;
+        if (labelTextSize <= 5 ){
+            labelTextSize = 5;
+        }
         
-        CGFloat labelTextSize = 24 - row;
         [label setFont:[UIFont systemFontOfSize:labelTextSize]];
         
         
@@ -73,8 +74,7 @@
         CGRect itemBgFrame = CGRectMake(kHorSapaceing * (index+1) + index * itemWidth, 0, itemWidth, itemWidth);
         itemBgView.frame = itemBgFrame;
         
-        itemBgView.backgroundColor = [UIColor greenColor];
-        
+        itemBgView.backgroundColor = [UIColor whiteColor];
         
         [cell.cellViewItems addObject:itemBgView];
         

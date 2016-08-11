@@ -19,6 +19,7 @@
     CGFloat cellHeight;
     NSInteger rowItem;//一行显示个数
 }
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) NSMutableArray *labelArray;
 @end
@@ -41,6 +42,8 @@
     _labelArray = [@[cellModel1,cellModel2,cellModel3,cellModel4,cellModel5,cellModel6,cellModel7] copy];
     
     rowItem = 4;
+    
+    self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;//去掉分割线
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,7 +55,7 @@
 
     
     
-    return cellHeight + 3.0;
+    return cellHeight + 1;
     
 }
 
@@ -73,7 +76,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    ZPHGrideViewCell *cell = [ZPHGrideViewCell initZPHGrideViewCellWithRow:rowItem];
+    ZPHGrideViewCell *cell = [ZPHGrideViewCell initZPHGrideViewCellWithRow:rowItem TableViewFrame:tableView.frame];
     cellHeight = cell.frame.size.height;
     
     cell = [cell setItemViewDataWithArray:_labelArray IndexPath:indexPath Delegate:self Rownums:rowItem];
